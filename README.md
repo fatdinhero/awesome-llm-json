@@ -20,7 +20,7 @@ Unfortunately, generating JSON goes by a few different names that roughly mean t
 * [Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs): Using an LLM to generate any structured output including JSON, XML, or YAML regardless of technique (e.g. function calling, guided generation).
 * [Function Calling](https://www.promptingguide.ai/applications/function_calling): Providing an LLM a hypothetical (or actual) function definition for it to "call" in it's chat or completion response. The LLM doesn't actually call the function, it just provides an indication that one should be called via a JSON message.
 * [JSON Mode](https://platform.openai.com/docs/guides/text-generation/json-mode): Specifying that an LLM must generate valid JSON. Depending on the provider, a schema may or may not be specified and the LLM may create an unexpected schema.
-* [Tool Usage](https://python.langchain.com/docs/modules/agents/agent_types/openai_tools): Giving an LLM a choice of tools such as image generation, web search, and "function calling".  The functional calling parameter in the API request is now called "tools".
+* [Tool Usage](https://python.langchain.com/docs/concepts/tools/): Giving an LLM a choice of tools such as image generation, web search, and "function calling".  The functional calling parameter in the API request is now called "tools".
 * [Guided Generation](https://arxiv.org/abs/2307.09702): For constraining an LLM model to generate text that follows a prescribed specification such as a [Context-Free Grammar](https://en.wikipedia.org/wiki/Context-free_grammar).
 * [GPT Actions](https://platform.openai.com/docs/actions/introduction): ChatGPT invokes actions (i.e. API calls) based on the endpoints and parameters specified in an [OpenAPI specification](https://swagger.io/specification/). Unlike the capability called "Function Calling", this capability will indeed call your function hosted by an API server.
 
@@ -92,7 +92,7 @@ Below is a list of hosted API models that support multiple parallel function cal
 
 [Instructor](https://github.com/jxnl/instructor) (MIT) simplifies generating structured data from LLMs using Function Calling, Tool Calling, and constrained sampling modes. Built on Pydantic for validation and supports various LLMs.
 
-[LangChain](https://github.com/langchain-ai/langchain) (MIT) provides an interface for chains, integrations with other tools, and chains for applications. LangChain offers [chains for structured outputs](https://python.langchain.com/docs/modules/chains/how_to/structured_outputs) and [function calling](https://python.langchain.com/docs/modules/model_io/chat/function_calling) across models.
+[LangChain](https://github.com/langchain-ai/langchain) (MIT) provides an interface for chains, integrations with other tools, and chains for applications. LangChain offers [structured outputs](https://python.langchain.com/docs/how_to/structured_output/) and [tool calling](https://python.langchain.com/docs/how_to/tool_calling/) across models.
 
 [LiteLLM](https://github.com/BerriAI/litellm) (MIT) simplifies calling 100+ LLMs in the OpenAI format, supporting [function calling](https://docs.litellm.ai/docs/completion/function_call), tool calling, and JSON mode.
 
